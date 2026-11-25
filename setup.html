@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MailboxOne setup guide</title>
+<style>
+  body { font: 16px/1.6 "Segoe UI", system-ui, sans-serif; max-width: 640px; margin: 48px auto; padding: 0 20px; color: #1c2233; }
+  h2 { margin-top: 32px; font-size: 18px; }
+  a { color: #3b6df0; }
+  code { background: #eef1f6; padding: 1px 5px; }
+  .note { border-left: 3px solid #f2a900; padding: 4px 14px; background: #fff8e6; }
+</style>
+</head>
+<body>
+  <h1>MailboxOne setup guide</h1>
+  <p><a href="index.html">&larr; MailboxOne</a></p>
+
+  <h2>1. Install</h2>
+  <p>Run the installer. Windows may say "Windows protected your PC" because the installer is not signed with a paid certificate: choose <b>More info</b>, then <b>Run anyway</b>.</p>
+
+  <h2>2. Create your Google sign-in key (once, about five minutes)</h2>
+  <p>MailboxOne talks to Gmail and Google Calendar through a small "key" that belongs to you, in your own free Google project. That keeps your mail between you and Google only. MailboxOne walks you through it: on the first screen press <b>Set up Google sign-in</b>. The five steps are:</p>
+  <ol>
+    <li>Create a project named <code>MailboxOne</code> in Google Cloud.</li>
+    <li>Turn on the <b>Gmail API</b> and the <b>Google Calendar API</b>.</li>
+    <li>Set up the consent screen (App name <code>MailboxOne</code>, Audience <b>External</b>), add the three permissions the guide lists, and press <b>Publish app</b>. Skipping "Publish app" makes Google sign you out every 7 days.</li>
+    <li>Create an OAuth client of type <b>Desktop app</b> and download its JSON file.</li>
+    <li>MailboxOne finds the downloaded file in your Downloads folder (or you can drop it onto the window); press <b>Use this file</b>.</li>
+  </ol>
+  <p>One key serves all the Google accounts you add to MailboxOne.</p>
+
+  <h2>3. Sign in with Google</h2>
+  <p>Press <b>Sign in with Google</b>. Your browser opens Google's own sign-in page; MailboxOne never sees your password.</p>
+  <div class="note">
+    <p><b>"Google hasn't verified this app"</b> is expected: the app is yours and has not been through Google's review. Choose <b>Advanced</b>, then <b>Go to MailboxOne</b>, and leave every box ticked so mail and calendar both work.</p>
+  </div>
+
+  <h2>Several accounts</h2>
+  <p>Add more accounts from the avatar menu. Switch with <code>Ctrl+1</code> to <code>Ctrl+9</code>. Give each a name and a colour in Settings &rarr; Accounts.</p>
+
+  <h2>Email links and starting with Windows</h2>
+  <p>Settings &rarr; General has <b>Default mail app</b> (email links in web pages open MailboxOne; Windows asks you to confirm) and <b>Start with Windows</b>.</p>
+
+  <h2>Something not working?</h2>
+  <p>In MailboxOne open Settings &rarr; About and support &rarr; <b>Copy diagnostics</b>, then paste the result into a message at <a href="https://github.com/HecticMike/mailbox-site/issues/new">github.com/HecticMike/mailbox-site/issues</a>. It contains no mail, subjects or addresses.</p>
+
+  <p><a href="privacy.html">Privacy policy</a></p>
+</body>
+</html>
